@@ -1,0 +1,9 @@
+proc(x, y, esc, alpha)
+local n1, ap, T1;
+    n1 := nudodv(x, y, esc, alpha);
+    ap :=
+        Apoyodes(x + sin(alpha)*esc, y - cos(alpha)*esc, .75*esc, 0)
+        ;
+    display(n1, ap)
+end
+

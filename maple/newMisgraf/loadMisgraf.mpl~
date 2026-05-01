@@ -1,0 +1,13 @@
+ruta := "C:/Users/UPM/Desktop/newMisgraf/";
+archivos := FileTools[ListDirectory](ruta);
+
+cargados := [];
+fallidos := [];
+for f in archivos do
+    if 4 < length(f) and f[-4 .. -1] = ".mpl" then try nombre_func := f[1 .. -5]; contenido := FileTools[Text][ReadFile](cat(ruta, f)); contenido := StringTools[Trim](contenido); sentencia := cat(nombre_func, " := ", contenido, ":"); parse(sentencia, statement); cargados := [op(cargados), nombre_func]; catch: fallidos := [op(fallidos), f]; printf("Error procesando: %s\n", f); end try; end if;
+end do;
+printf("\n--- PROCESO FINALIZADO ---\n");
+printf("Funciones cargadas: %d\n", nops(cargados));
+if 0 < nops(fallidos) then
+    print("Fallidos:", fallidos);
+end if;

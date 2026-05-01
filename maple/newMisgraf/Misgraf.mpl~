@@ -1,0 +1,8 @@
+table([
+
+    nudovN = readlib('Misgraf/nudovN'),
+
+    nudo0 = readlib('Misgraf/nudo0'),
+
+    Mvig_empMVNq = readlib('Misgraf/Mvig_empMVNq')
+    ]);

@@ -1,0 +1,14 @@
+
+    read "viga11.mpl";
+    read "trasf.mpl";
+    read "Arti.mpl";
+
+Misgraf := module()
+    option package;
+    export viga11, trasf, Arti;
+
+    viga11 := eval(:-viga11);
+    trasf := eval(:-trasf);
+    Arti := eval(:-Arti);
+    # El comando $include copia el contenido de los archivos automáticamente
+end module:
