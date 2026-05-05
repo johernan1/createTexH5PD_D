@@ -1,6 +1,8 @@
 # Forzamos la ruta donde están los archivos
 #ruta := "C:/Users/UPM/Desktop/newMisgraf/lib":
-ruta := "/home/upm/Escritorio/lib":
+print("Inicio_loadMisgraf");
+#ruta := "/home/upm/Escritorio/lib":
+ruta := "/home/upm/Escritorio/createTexH5PD_D/maple/newMisgraf/lib/";
 currentdir(ruta):
 # 1. Usamos un comando de sistema para listar los nombres REALES en un archivo temporal
 #system(cat("dir /b *.mpl > lista_ficheros.txt")):

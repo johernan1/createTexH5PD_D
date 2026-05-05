@@ -3,9 +3,13 @@ printf("-----------------------inicio de init0.mws---------------------\n");
 with(linalg):
 with(plots):
 with(plottools):
-printf("     Para recordar las funciones de Misgraf->with(Misgraf);---\n");
+#printf("     Para recordar las funciones de Misgraf->with(Misgraf);---\n");
 printf("     Hay que definir _EnvMD para usar Misgraf-----------------\n"); _EnvMD:=0;
-with(Misgraf):
+#with(Misgraf):
+print(currentdir());
+ruta_original := currentdir():
+read("newMisgraf/loadMisgraf_linux.mpl");
+currentdir(ruta_original):
 MiByN:=1:
 FICH:=1:
 
